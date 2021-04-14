@@ -12,3 +12,8 @@ Tell the employer about the assignment. What things did you learn?
 - As a user, I want to remove a book from the bookshelf.
 
 ![Use Case Diagram for Books](diagrams/UseCaseDiagram-Bookshelf.jpg)
+
+## Class Diagram
+
+![Class Diagram for Book](diagrams/ClassDiagramBook.jpg)
+
