@@ -4,8 +4,9 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         String menuTitle = "Main Menu";
         String prompt = "Select an option:";
-        String[] menuOptions = {"Test Data","Option 2","Option 3"};
+        String[] menuOptions = {"Add a Book","View Books","Update Book as Read", "Delete a Book"};
         int choice = 0;
+        new Bookshelf();
         while (true) {
             choice = UIUtility.showMenuOptions(menuTitle, prompt, menuOptions, scanner);
             if (choice == 0)
@@ -15,7 +16,7 @@ public class App {
             UIUtility.showSectionTitle(menuOptions[Integer.valueOf(choice) - 1]);
             switch (choice) {
                 case 1:
-                    testData(scanner);
+                    addABook(scanner);
                     break;
                 case 2:
 
@@ -28,6 +29,12 @@ public class App {
        System.out.println("\nProgram complete. Goodbye.\n");
        scanner.close();
     } 
+
+    public static void addABook(Scanner scanner) {
+        int bookCount = Bookshelf.getBookshelf().size();
+        System.out.println(bookCount);
+    }
+
     
     public static void testData(Scanner scanner) {
         Book b1 = new Book();

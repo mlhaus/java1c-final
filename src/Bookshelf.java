@@ -2,16 +2,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bookshelf {
-    private Book[] bookshelf;
-    // private List<Book> bookshelf;
+    private static List<Book> bookshelf;
 
     public Bookshelf() {
-        bookshelf = new Book[10];
-        // bookshelf = new ArrayList<>(10);
+        bookshelf = new ArrayList<>(10);
+        Book b1 = new Book();
+        Book b2 = new Book("Java 1", "Marc Hauschildt", "2021-02-06", 300, true);
+        Book b3 = new ChildrensBook();
+        Book b4 = new ChildrensBook("Java for Kids", "Marc Hauschildt", "Dr. Suess", "2021-03-14", 50, false);
+        bookshelf.add(b1);
+        bookshelf.add(b2);
+        bookshelf.add(b3);
+        bookshelf.add(b4);
     }
 
-    public Bookshelf(int numBooks) {
-        bookshelf = new Book[numBooks];
+    public static List<Book> getBookshelf() {
+        return bookshelf;
     }
 
     public static void addBook(Book book) {
