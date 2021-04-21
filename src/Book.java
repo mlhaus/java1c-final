@@ -23,6 +23,16 @@ public class Book implements Comparable<Book> {
         this.read = read;
     }
 
+    public String toString() {
+        String result = "";
+        result += "Title: " + title + ", ";
+        result += "Author: " + author + ", ";
+        result += "Date Added: " + dateAdded + ", ";
+        result += "Number of Pages: " + numPages + ", ";
+        result += "Read: " + read;
+        return result;
+    }
+
     @Override
     public int compareTo(Book other) {
         int result = this.title.compareToIgnoreCase(other.title);
