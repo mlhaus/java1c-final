@@ -11,6 +11,14 @@ public class ChildrensBook extends Book {
         this.illustrator = illustrator;
     }
 
+    public String getIllustrator() {
+        return illustrator;
+    }
+
+    public void setIllustrator(String illustrator) {
+        this.illustrator = illustrator;
+    }
+
     public String toString() {
         String result = "";
         result += super.toString();
